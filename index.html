@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Les petits plats</title>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="header_link">
+            <img src="assets/logo.svg" class="header_logo" alt="Logo - Les petits plat" />
+        </a>
+    </header>
+
+    <main class="main">
+        <!-- Barre de recherche -->
+        <section class="search">
+            <div class="search_container">
+                <input type="text" class="search_input" placeholder="Rechercher une recette">
+                <button class="search_button"> 
+                    <img src="assets/loupe.svg" class="search_loupe" alt="loupe de recherche" /> 
+                </button>
+              </div>
+        </section>
+
+        <!-- Des tags -->
+        <section class="tags"> 
+        </section>
+
+        <!-- Des filtres de recherche -->
+            <section class="filter">
+
+                  <div class="dropdownMenu">
+
+                    <div class="filter-select ingredients">
+                      <a href="#" class="filter-select__option">
+                          <span>Ingrédients</span>
+                          <div class="arrow"></div>
+                      </a>
+                      <div class="filter-options-container" id="filter-options">
+                        <!-- généré avec du js -->
+                      </div>
+                    </div>
+
+                    <div class="filter-select appareils">
+                        <a href="#" class="filter-select__option">
+                            <span>Appareils</span>
+                            <div class="arrow"></div>
+                        </a>
+                        <div class="filter-options-container" id="filter-options">
+                            <!-- généré avec du js -->
+                          </div>
+                      </div>
+
+                      <div class="filter-select ustensiles">
+                        <a href="#" class="filter-select__option">
+                            <span id="sortType">Ustensils</span>
+                            <div class="arrow"></div>
+                        </a>
+                        <div class="filter-options-container" id="filter-options">
+                            <!-- généré avec du js -->
+                          </div>
+                      </div>
+
+                  </div>
+              </section>
+
+
+            <!-- Les cartes de recettes -->
+            <section class="cards">
+            </section>
+
+    </main>
+
+    <script src="./scripts/index.js" type="module"></script>
+    <script src="./scripts/utils/filter.js" type="module"></script>
+
+   
+
+</body>
+</html>
