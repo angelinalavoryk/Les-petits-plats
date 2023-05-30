@@ -1,0 +1,26 @@
+{
+  "name": "website-les-petits-plats",
+  "version": "1.0.0",
+  "description": "Code repo for project 7 :  a search engine for recipes.",
+  "main": "recipes.js",
+  "type": "module",
+  "scripts": {
+    "start": "http-server ./ -p 3000",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelinalavoryk/webSite-Les-petits-plats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelinalavoryk/webSite-Les-petits-plats/issues"
+  },
+  "homepage": "https://github.com/angelinalavoryk/webSite-Les-petits-plats#readme",
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "http-server": "^14.1.1"
+  }
+}

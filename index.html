@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/logosite.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Les petits plats</title>
 </head>
 <body>
+    <div class="container">
     <header class="header">
         <a href="" class="header_link">
             <img src="assets/logo.svg" class="header_logo" alt="Logo - Les petits plat" />
         </a>
     </header>
-
     <main class="main">
         <!-- Barre de recherche -->
         <section class="search">
@@ -30,57 +33,85 @@
 
         <!-- Des tags -->
         <section class="tags"> 
+          <p class="tag tagIngridients"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle closeIngredientTag" id="close" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg></p>
+          <p class="tag tagAppliance"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle closeApplianceTag" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg></p>
+          <p class="tag tagUstensil"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle closeUstensilsTag" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg></p>
         </section>
 
         <!-- Des filtres de recherche -->
-            <section class="filter">
+              <section class="filter-section">
+              <div class="filters-wrapper">
 
-                  <div class="dropdownMenu">
+                <div class="filter filter--ingredient">
+                  <label id="ingredient-filter-label" for="ingredient">
+                    <span class="filter_name">Ingrédients</span>
+                    <input
+                      class="input input-ingridients"
+                      type="text"
+                      id="ingredient"
+                      placeholder="Rechercher un ingrédient"
+                    />
+                    <div class="arrow"></div>
+                    <ul class="closed" id="ingredient-list" data-filter="ingredient"></ul>
+                  </label>
+                </div>
 
-                    <div class="filter-select ingredients">
-                      <a href="#" class="filter-select__option">
-                          <span>Ingrédients</span>
-                          <div class="arrow"></div>
-                      </a>
-                      <div class="filter-options-container" id="filter-options">
-                        <!-- généré avec du js -->
-                      </div>
-                    </div>
-
-                    <div class="filter-select appareils">
-                        <a href="#" class="filter-select__option">
-                            <span>Appareils</span>
-                            <div class="arrow"></div>
-                        </a>
-                        <div class="filter-options-container" id="filter-options">
-                            <!-- généré avec du js -->
-                          </div>
-                      </div>
-
-                      <div class="filter-select ustensiles">
-                        <a href="#" class="filter-select__option">
-                            <span id="sortType">Ustensils</span>
-                            <div class="arrow"></div>
-                        </a>
-                        <div class="filter-options-container" id="filter-options">
-                            <!-- généré avec du js -->
-                          </div>
-                      </div>
-
-                  </div>
-              </section>
-
+        
+                <div class="filter filter--appliance">
+                  <label id="appliance-filter-label" for="appliance">
+                    <span class="filter_name">Appareils</span>
+                    <input
+                      class="input input-appliance"
+                      type="text"
+                      id="appliance"
+                      placeholder="Rechercher un appareil"
+                    />
+                    <div class="arrow"></div>
+                  </label>
+                  <ul class="closed" id="appliance-list" data-filter="appliance"></ul>
+                </div>
+        
+                <div class="filter filter--ustensil">
+                  <label id="ustensil-filter-label" for="ustensil">
+                    <span class="filter_name">Ustensiles</span>
+                    <input
+                      class="input input-ustensil"
+                      type="text"
+                      id="ustensil"
+                      placeholder="Rechercher un ustensile"
+                    />
+                    <div class="arrow"></div>
+                  </label>
+                  <ul class="closed" id="ustensil-list" data-filter="ustensil"></ul>
+                </div>
+              </div>
+              <p class="messageError">Aucune recette ne correspond à votre critère...  pouvez chercher  "tarte au pomme",  "poisson"  etc.</p>
+            </section>
 
             <!-- Les cartes de recettes -->
             <section class="cards">
+                <div class="row"></div>
             </section>
 
     </main>
+</div>
 
     <script src="./scripts/index.js" type="module"></script>
     <script src="./scripts/utils/filter.js" type="module"></script>
 
-   
+    <!-- Js Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 
 </body>
 </html>
