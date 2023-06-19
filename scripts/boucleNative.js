@@ -1,15 +1,13 @@
 import { recipes } from './data/recipes.js';
 import { recipesFactory } from './utils/factoryRecipes.js';
 
-export let filteredRecipes = recipes;
-export const initialRecipes = recipes;
-let filteredAppliances = [];
-let filteredUstensils = [];
+let filteredRecipes = recipes;
+const initialRecipes = recipes;
 
 const recipesSection = document.querySelector('.row');
 const messageError = document.querySelector('.messageError');
 
-export function displayData(recipes) {
+function displayData(recipes) {
   recipesSection.innerHTML = '';
   for (let i = 0; i < recipes.length; i++) {
     const recipe = recipes[i];
@@ -25,7 +23,7 @@ function init() {
 init();
 
 // search bar
-export const input = document.querySelector('.search_input');
+const input = document.querySelector('.search_input');
 input.addEventListener('input', searchRecipes);
 
 function searchRecipes() {
