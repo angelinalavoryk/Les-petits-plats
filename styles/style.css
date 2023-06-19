@@ -186,6 +186,26 @@ li{
   align-items:                           center;
 }
 
+@media screen and (max-width: 767px){
+  .filters-wrapper{
+    flex-direction: column;
+  }
+
+  .filter input[type="text"] {
+    width:                                 auto;
+    animation:                             none;
+  }
+
+  .filter {
+    display:                            block;
+    height: 65px;
+  }
+
+  .filter.open {
+    display:                              block;
+  }
+}
+
 .filter label span {
   margin-right:                            10px;
 }
@@ -391,6 +411,8 @@ li{
 #ustensil-list.closed {
   display: none;
 }
+
+
   
 
 
