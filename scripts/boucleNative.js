@@ -87,5 +87,3 @@ function showMessageError() {
 function hideMessageError() {
   messageError.style.display = 'none';
 }
-
-
