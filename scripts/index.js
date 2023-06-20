@@ -635,63 +635,6 @@ tagUstensils.addEventListener('click', () => {
 
 
 
-// function searchRecipes() {
-//   const searchText = input.value.trim().toLowerCase();
-//   if (searchText.length < 3) {
-//     displayData(initialRecipes);
-//     hideMessageError();
-//     return;
-//   }
-//   filteredRecipes = initialRecipes.filter(
-//     (recipe) =>
-//       recipe.ingredients.some((ingredient) =>
-//         ingredient.ingredient.toLowerCase().includes(searchText)
-//       ) ||
-//       recipe.name.toLowerCase().includes(searchText) ||
-//       recipe.description.toLowerCase().includes(searchText)
-//   );
-//   displayFilteredRecipes(filteredRecipes);
-//   if (filteredRecipes.length === 0) {
-//     showMessageError();
-//   } else {
-//     hideMessageError();
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
